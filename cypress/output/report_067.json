@@ -1,0 +1,134 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2020-07-05T12:49:10.738Z",
+    "end": "2020-07-05T12:50:20.467Z",
+    "duration": 69729,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a1f4721f-a1a1-4f25-897f-c97614b82638",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\dependency_testing5.js",
+      "file": "cypress\\integration\\examples\\dependency_testing5.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d3669e70-a521-4d55-9a7b-68e49c7bf07c",
+          "title": "My First Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": " headings",
+              "fullTitle": "My First Test  headings",
+              "timedOut": null,
+              "duration": 50216,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php');\ncy.get('#search_query_top').type('T-Shirts', {\n  delay: 100\n});\ncy.get('.button-search').click({\n  delay: 100\n});\ncy.get('#color_2').click();\ncy.get('#group_1').select('2');\ncy.get('[name=\"Submit\"]').click();\ncy.get('[title=\"Continue shopping\"]').click();\ncy.get('[alt=\"My Store\"]').click();\ncy.get('#homefeatured > .last-item-of-tablet-line.first-item-of-mobile-line > .product-container > .right-block > .button-container > .ajax_add_to_cart_button > span').click();\ncy.get('.continue > span').click();\ncy.get('[alt=\"My Store\"]').click();\ncy.get('#homefeatured > :nth-child(2) > .product-container > .right-block > .button-container > .ajax_add_to_cart_button > span').click();\ncy.get('.continue > span').click();\ncy.get('[alt=\"My Store\"]').click();\ncy.get('#homefeatured > .last-mobile-line > .product-container > .right-block > .button-container > .ajax_add_to_cart_button > span').click();\ncy.get('.continue > span').click();\ncy.get('[title=\"View my shopping cart\"]').click();",
+              "err": {
+                "message": "CypressError: Timed out retrying: `cy.click()` failed because this element is not visible:\n\n`<span class=\"continue btn btn-default button exclusive-medium\" title=\"Continue shopping\">...</span>`\n\nThis element `<span.continue.btn.btn-default.button.exclusive-medium>` is not visible because its parent `<div#layer_cart>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying: `cy.click()` failed because this element is not visible:\n\n`<span class=\"continue btn btn-default button exclusive-medium\" title=\"Continue shopping\">...</span>`\n\nThis element `<span.continue.btn.btn-default.button.exclusive-medium>` is not visible because its parent `<div#layer_cart>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureVisibility (http://automationpractice.com/__cypress/runner/cypress_runner.js:159751:24)\n    at runAllChecks (http://automationpractice.com/__cypress/runner/cypress_runner.js:148853:14)\n    at retryActionability (http://automationpractice.com/__cypress/runner/cypress_runner.js:148896:16)\n    at tryCatcher (http://automationpractice.com/__cypress/runner/cypress_runner.js:10161:23)\n    at Function.Promise.attempt.Promise.try (http://automationpractice.com/__cypress/runner/cypress_runner.js:7435:29)\n    at tryFn (http://automationpractice.com/__cypress/runner/cypress_runner.js:162997:24)\n    at whenStable (http://automationpractice.com/__cypress/runner/cypress_runner.js:163038:12)\n    at http://automationpractice.com/__cypress/runner/cypress_runner.js:162561:16\n    at tryCatcher (http://automationpractice.com/__cypress/runner/cypress_runner.js:10161:23)\n    at Promise._settlePromiseFromHandler (http://automationpractice.com/__cypress/runner/cypress_runner.js:8096:31)\n    at Promise._settlePromise (http://automationpractice.com/__cypress/runner/cypress_runner.js:8153:18)\n    at Promise._settlePromise0 (http://automationpractice.com/__cypress/runner/cypress_runner.js:8198:10)\n    at Promise._settlePromises (http://automationpractice.com/__cypress/runner/cypress_runner.js:8278:18)\n    at Promise._fulfill (http://automationpractice.com/__cypress/runner/cypress_runner.js:8222:18)\n    at http://automationpractice.com/__cypress/runner/cypress_runner.js:9836:46\nFrom Your Spec Code:\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress\\integration\\examples\\dependency_testing5.js:18:43)",
+                "diff": null
+              },
+              "uuid": "59fa70b1-5e9f-4bd0-9836-fd9358f074a1",
+              "parentUUID": "d3669e70-a521-4d55-9a7b-68e49c7bf07c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2",
+              "fullTitle": "My First Test 2",
+              "timedOut": null,
+              "duration": 9658,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#cart_summary > tbody > tr  td:nth-child(4)').each(function (em, no, list) {\n  var text = em.text(); //if(text.includes(\"In stock\"))\n  if (text.includes(\"-20%\")) {\n    cy.get('#cart_summary> tbody > tr  td:nth-child(3)').eq(no).then(function (pname) {\n      var name = pname.text();\n      expect(name).to.equal(\"In stock\");\n    });\n  } //expect(text).to.equal(\"-20%\")\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `#cart_summary > tbody > tr  td:nth-child(4)`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#cart_summary > tbody > tr  td:nth-child(4)`, but never found it.\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress\\integration\\examples\\dependency_testing5.js:31:8)",
+                "diff": null
+              },
+              "uuid": "b61e7af9-1298-411c-8d64-04a0a4a7bfbf",
+              "parentUUID": "d3669e70-a521-4d55-9a7b-68e49c7bf07c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "59fa70b1-5e9f-4bd0-9836-fd9358f074a1",
+            "b61e7af9-1298-411c-8d64-04a0a4a7bfbf"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 59874,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-06T06:09:21.962Z",
+    "end": "2020-07-06T06:09:38.709Z",
+    "duration": 16747,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1c29fce6-a54e-4a79-aa72-99d347aba0cd",
+      "title": "",
+      "fullFile": "cypress\\integration\\2nd_folder\\3.js",
+      "file": "cypress\\integration\\2nd_folder\\3.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "23125c6a-ac6d-4700-a218-6c9098a31c21",
+          "title": "hello",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "hi",
+              "fullTitle": "hello hi",
+              "timedOut": null,
+              "duration": 10947,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.amazon.in/');",
+              "err": {},
+              "uuid": "c5fbfc37-77d2-44ef-a198-dfa9461424a0",
+              "parentUUID": "23125c6a-ac6d-4700-a218-6c9098a31c21",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c5fbfc37-77d2-44ef-a198-dfa9461424a0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10947,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

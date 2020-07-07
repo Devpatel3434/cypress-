@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-02T21:50:54.733Z",
+    "end": "2020-07-02T21:51:53.007Z",
+    "duration": 58274,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a70d15a7-58f2-4899-89da-29ba28904ecb",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\navigation.spec.js",
+      "file": "cypress\\integration\\examples\\navigation.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eab75447-16ad-425c-8810-8669e3d7d0cb",
+          "title": "Navigation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "cy.go() - go back or forward in the browser's history",
+              "fullTitle": "Navigation cy.go() - go back or forward in the browser's history",
+              "timedOut": null,
+              "duration": 25081,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/go\ncy.location('pathname').should('include', 'navigation');\ncy.go('back');\ncy.location('pathname').should('not.include', 'navigation');\ncy.go('forward');\ncy.location('pathname').should('include', 'navigation'); // clicking back\ncy.go(-1);\ncy.location('pathname').should('not.include', 'navigation'); // clicking forward\ncy.go(1);\ncy.location('pathname').should('include', 'navigation');",
+              "err": {},
+              "uuid": "e5d4430d-a40d-43ce-a621-7a2fc6e293d0",
+              "parentUUID": "eab75447-16ad-425c-8810-8669e3d7d0cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "cy.reload() - reload the page",
+              "fullTitle": "Navigation cy.reload() - reload the page",
+              "timedOut": null,
+              "duration": 14534,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/reload\ncy.reload(); // reload the page without using the cache\ncy.reload(true);",
+              "err": {},
+              "uuid": "3b5fed69-9476-4757-aca7-4696f5598db3",
+              "parentUUID": "eab75447-16ad-425c-8810-8669e3d7d0cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "cy.visit() - visit a remote url",
+              "fullTitle": "Navigation cy.visit() - visit a remote url",
+              "timedOut": null,
+              "duration": 11879,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/visit\n// Visit any sub-domain of your current domain\n// Pass options to the visit\ncy.visit('https://example.cypress.io/commands/navigation', {\n  timeout: 50000,\n  // increase total time for the visit to resolve\n  onBeforeLoad: function onBeforeLoad(contentWindow) {\n    // contentWindow is the remote page's window object\n    expect((0, _typeof2[\"default\"])(contentWindow) === 'object').to.be[\"true\"];\n  },\n  onLoad: function onLoad(contentWindow) {\n    // contentWindow is the remote page's window object\n    expect((0, _typeof2[\"default\"])(contentWindow) === 'object').to.be[\"true\"];\n  }\n});",
+              "err": {},
+              "uuid": "b0c143b8-e1c5-497b-9b05-000d4aac6fd0",
+              "parentUUID": "eab75447-16ad-425c-8810-8669e3d7d0cb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e5d4430d-a40d-43ce-a621-7a2fc6e293d0",
+            "3b5fed69-9476-4757-aca7-4696f5598db3",
+            "b0c143b8-e1c5-497b-9b05-000d4aac6fd0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 51494,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

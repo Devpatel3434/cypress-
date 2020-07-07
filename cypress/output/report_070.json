@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-05T12:54:02.523Z",
+    "end": "2020-07-05T12:54:27.294Z",
+    "duration": 24771,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d145eb41-538e-4995-817e-5a6a2816f0ea",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\fx.js",
+      "file": "cypress\\integration\\examples\\fx.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7e1ccb1e-6d38-4df9-9cc2-b6a01d3bd7f1",
+          "title": "file uplode",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "try",
+              "fullTitle": "file uplode try",
+              "timedOut": null,
+              "duration": 16969,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://testautomationpractice.blogspot.com/');\ncy.get('#draggable').trigger('mousedown', {\n  which: 1,\n  pageX: 600,\n  pageY: 100\n}).trigger('mousemove', {\n  which: 1,\n  pageX: 765,\n  pageY: 150\n}).trigger('mouseup');\ncy.get('#gallery > :nth-child(1) > img').trigger('mousedown', {\n  which: 1,\n  pageX: 800,\n  pageY: 100\n}).trigger('mousemove', {\n  which: 1,\n  pageX: 1000,\n  pageY: 400\n}).trigger('mouseup');\ncy.get('.gallery > .ui-widget-content > .ui-icon').click();\ncy.get('[style=\"display: list-item; width: 48px;\"] > .ui-icon').click();",
+              "err": {},
+              "uuid": "06d26050-50a8-48b7-b5dc-4dfa584492fb",
+              "parentUUID": "7e1ccb1e-6d38-4df9-9cc2-b6a01d3bd7f1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "06d26050-50a8-48b7-b5dc-4dfa584492fb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16969,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

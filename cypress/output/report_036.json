@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-02T21:54:33.814Z",
+    "end": "2020-07-02T21:55:03.072Z",
+    "duration": 29258,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "93a909b0-851c-4346-8cc6-b44b598614a5",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\new.js",
+      "file": "cypress\\integration\\examples\\new.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2e19ab19-9712-4185-8c81-59a550e0534b",
+          "title": "must try and try",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1st",
+              "fullTitle": "must try and try 1st",
+              "timedOut": null,
+              "duration": 20941,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://testautomationpractice.blogspot.com/');\ncy.get('#Wikipedia1_wikipedia-search-input').click().type('bugatti chiron');\ncy.get('.wikipedia-search-button').click();\ncy.get('#Wikipedia1_wikipedia-search-results > :nth-child(1) > a').click(); //cy.visit ('https://en.wikipedia.org/wiki/Bugatti_Chiron')\n//cy.title().should('eq','Bugatti Chiron - Wikipedia')",
+              "err": {},
+              "uuid": "e0f7b386-137d-4fe7-bbf8-43efbb506c4f",
+              "parentUUID": "2e19ab19-9712-4185-8c81-59a550e0534b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e0f7b386-137d-4fe7-bbf8-43efbb506c4f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20941,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

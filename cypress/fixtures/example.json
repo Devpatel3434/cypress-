@@ -1,0 +1,8 @@
+{
+  "name": "Using fixtures to represent data",
+  "emails": "Devistesting3434@gmail.com",
+  "body": "Fixtures are a great way to mock data for responses to routes",
+  "price": "$16.51",
+  "price_blue" : "$18.51",
+  "totle_price" : "$34.91"
+}

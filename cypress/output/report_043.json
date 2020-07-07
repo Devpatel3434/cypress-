@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-02T22:04:21.700Z",
+    "end": "2020-07-02T22:04:56.916Z",
+    "duration": 35216,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0afc2fe2-777a-4d69-8b0a-c2c702908d0b",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\waiting.spec.js",
+      "file": "cypress\\integration\\examples\\waiting.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "22ea5920-0edc-4b4e-9f92-58d4e4c424a0",
+          "title": "Waiting",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "cy.wait() - wait for a specific amount of time",
+              "fullTitle": "Waiting cy.wait() - wait for a specific amount of time",
+              "timedOut": null,
+              "duration": 13118,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.wait-input1').type('Wait 1000ms after typing');\ncy.wait(1000);\ncy.get('.wait-input2').type('Wait 1000ms after typing');\ncy.wait(1000);\ncy.get('.wait-input3').type('Wait 1000ms after typing');\ncy.wait(1000);",
+              "err": {},
+              "uuid": "db25041d-7938-45e9-8cdc-8102854b9cab",
+              "parentUUID": "22ea5920-0edc-4b4e-9f92-58d4e4c424a0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "cy.wait() - wait for a specific route",
+              "fullTitle": "Waiting cy.wait() - wait for a specific route",
+              "timedOut": null,
+              "duration": 14591,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server(); // Listen to GET to comments/1\ncy.route('GET', 'comments/*').as('getComment'); // we have code that gets a comment when\n// the button is clicked in scripts.js\ncy.get('.network-btn').click(); // wait for GET comments/1\ncy.wait('@getComment').its('status').should('eq', 200);",
+              "err": {},
+              "uuid": "d2103ff8-2c3e-4dac-bcba-dd214c16eb17",
+              "parentUUID": "22ea5920-0edc-4b4e-9f92-58d4e4c424a0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "db25041d-7938-45e9-8cdc-8102854b9cab",
+            "d2103ff8-2c3e-4dac-bcba-dd214c16eb17"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 27709,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

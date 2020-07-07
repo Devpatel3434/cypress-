@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-06T06:26:48.974Z",
+    "end": "2020-07-06T06:26:49.376Z",
+    "duration": 402,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a52b74f4-fd0b-4bdf-a973-b50a23e7f6a6",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\file.js",
+      "file": "cypress\\integration\\examples\\file.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c68fcc27-7596-4eba-b49c-294670a5e53d",
+          "title": "1st",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "2nd",
+              "fullTitle": "1st 2nd",
+              "timedOut": null,
+              "duration": 296,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.readFile('cypress/fixtures/try.txt');\ncy.writeFile('cypress/fixtures/try.txt', {\n  id: 8739,\n  name: 'abc',\n  email: 'abc@example.com'\n});",
+              "err": {},
+              "uuid": "9a055356-9b66-4937-8cce-06278663cfc8",
+              "parentUUID": "c68fcc27-7596-4eba-b49c-294670a5e53d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3rd",
+              "fullTitle": "1st 3rd",
+              "timedOut": null,
+              "duration": 120,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.readFile('cypress/fixtures/Tools COMP.xlsx');\ncy.writeFile('cypress/fixtures/Tools COMP.xlsx', {\n  id: 8739,\n  name: 'abc',\n  email: 'abc@example.com'\n});",
+              "err": {},
+              "uuid": "490928b1-94fc-4885-9749-5b824b7bfc50",
+              "parentUUID": "c68fcc27-7596-4eba-b49c-294670a5e53d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9a055356-9b66-4937-8cce-06278663cfc8",
+            "490928b1-94fc-4885-9749-5b824b7bfc50"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 416,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

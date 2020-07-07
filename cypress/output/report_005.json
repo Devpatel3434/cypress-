@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-02T21:13:24.111Z",
+    "end": "2020-07-02T21:13:54.922Z",
+    "duration": 30811,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2fba22dc-cc50-40db-b5c5-87b950e13b90",
+      "title": "",
+      "fullFile": "cypress\\integration\\3rd_folder\\5st.js",
+      "file": "cypress\\integration\\3rd_folder\\5st.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5a647295-087e-422d-9a2c-63af5566ccc8",
+          "title": "hello",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "hi",
+              "fullTitle": "hello hi",
+              "timedOut": null,
+              "duration": 24236,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php');",
+              "err": {},
+              "uuid": "712c3f25-bbbe-431d-82cd-8d670dbf8a8c",
+              "parentUUID": "5a647295-087e-422d-9a2c-63af5566ccc8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "712c3f25-bbbe-431d-82cd-8d670dbf8a8c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 24236,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

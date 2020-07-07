@@ -1,0 +1,131 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-07-06T06:17:40.148Z",
+    "end": "2020-07-06T06:18:18.010Z",
+    "duration": 37862,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "972b2288-28ed-464c-8cc2-7014bd870388",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\amazon.js",
+      "file": "cypress\\integration\\examples\\amazon.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eb87488d-002c-4821-8c4b-afadc1348c4a",
+          "title": "try",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1st",
+              "fullTitle": "try 1st",
+              "timedOut": null,
+              "duration": 22119,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.amazon.in/');\ncy.get('[href=\"/mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles\"]').click(); //cy.get(':nth-child(12) > .a-row > :nth-child(1) > .a-list-item > .a-declarative > .a-checkbox > label > input').not('[disabled]')\n//.check().should('be.checked')\ncy.xpath('//*[@id=\"leftNav\"]/ul[5]/div/li[2]/span/span/div/label/input').not('[disabled]').check().should('be.checked');\ncy.xpath('//*[@id=\"p_36/1318507031\"]/span/a').click(); //cy.xpath('//*[@id=\"p_n_is_cod_eligible/4931671031\"]/span/a/div').not('[disabled]')\n//cy.xpath('//*[@id=\"p_n_is_cod_eligible/4931671031\"]/span/a/div/label/input')\n//.check().should('be.checked')\ncy.get('[data-asin=\"B08444S68Q\"] > :nth-child(1) > .celwidget > .s-include-content-margin > .a-spacing-medium > :nth-child(2) > :nth-child(1) > .sg-col-inner > .a-spacing-none > .rush-component > .a-link-normal > .a-section > .s-image').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `undefined`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `undefined`, but never found it.\n    at Context.eval (https://www.amazon.in/__cypress/tests?p=cypress\\integration\\examples\\amazon.js:11:8)",
+                "diff": null
+              },
+              "uuid": "d39a9fb2-d48b-4a22-adf6-6491ab50bdef",
+              "parentUUID": "eb87488d-002c-4821-8c4b-afadc1348c4a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2nd",
+              "fullTitle": "try 2nd",
+              "timedOut": null,
+              "duration": 10612,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.amazon.in/Samsung-Galaxy-Storage-Additional-Exchange/dp/B08444S68Q/ref=sr_1_10?dchild=1&fst=as%3Aoff&qid=1592423846&refinements=p_89%3ASamsung%2Cp_36%3A1318507031&rnid=1318502031&s=electronics&sr=1-10');",
+              "err": {},
+              "uuid": "4aeb24cb-cfa3-4ba0-b81a-214511abeb41",
+              "parentUUID": "eb87488d-002c-4821-8c4b-afadc1348c4a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4aeb24cb-cfa3-4ba0-b81a-214511abeb41"
+          ],
+          "failures": [
+            "d39a9fb2-d48b-4a22-adf6-6491ab50bdef"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 32731,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

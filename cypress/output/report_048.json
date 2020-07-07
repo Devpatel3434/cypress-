@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-02T22:34:33.407Z",
+    "end": "2020-07-02T22:34:52.741Z",
+    "duration": 19334,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "54e73189-8dc0-4f1b-9c67-24cdcc21c2a6",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\open_cart.js",
+      "file": "cypress\\integration\\examples\\open_cart.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "648823c8-3595-4ba6-8893-9b7ee6a642fd",
+          "title": "My First Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": " headings",
+              "fullTitle": "My First Test  headings",
+              "timedOut": null,
+              "duration": 8882,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://opencart.abstracta.us/');\ncy.get('.caret').click(); // cy.get('.dropdown-menu > :nth-child(2) > a').click()\ncy.get('.dropdown-menu > :nth-child(1) > a').click();",
+              "err": {},
+              "uuid": "31785c91-3ca4-4094-9c63-42790548eea5",
+              "parentUUID": "648823c8-3595-4ba6-8893-9b7ee6a642fd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "31785c91-3ca4-4094-9c63-42790548eea5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8882,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-06T06:12:59.757Z",
+    "end": "2020-07-06T06:15:40.856Z",
+    "duration": 161099,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "802e7fea-4ffa-402e-864b-8838a6cb8238",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\all_in_automation.js",
+      "file": "cypress\\integration\\examples\\all_in_automation.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cddf5b89-4bca-4aa0-b556-b2246171be60",
+          "title": "My First Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": " headings",
+              "fullTitle": "My First Test  headings",
+              "timedOut": null,
+              "duration": 154324,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php');\ncy.get('#search_query_top').type('T-Shirts', {\n  delay: 100\n});\ncy.get('.button-search').click({\n  delay: 100\n});\ncy.get('.right-block > .content_price > .price').then(function ($data) {\n  var txt = $data.text().trim();\n  cy.get('#color_2').click();\n  cy.get('#our_price_display').should(function ($data2) {\n    expect($data2.text()).to.eq(txt);\n  });\n  cy.get('#thumb_4').trigger('mouseover');\n  cy.get('#group_1').select('2');\n  cy.get('[name=\"Submit\"]').click();\n  cy.get('[title=\"Continue shopping\"]').click();\n  cy.get('[title=\"View my shopping cart\"]').trigger('mouseover');\n  cy.get('[alt=\"My Store\"]').click(); //cy.scrollTo('bottom')\n  //cy.scrollTo('center')\n  cy.scrollTo('top');\n  cy.get('.last-mobile-line > .product-container > .right-block > .content_price > .price-percent-reduction').then(function ($dis) {\n    var val = $dis.text().trim();\n    cy.get('#homefeatured > .last-mobile-line > .product-container > .right-block > .button-container > .ajax_add_to_cart_button > span').click();\n    cy.get('[title=\"Continue shopping\"]').click();\n    cy.get('[title=\"View my shopping cart\"]').click();\n    cy.get('.price-percent-reduction').should(function ($dis2) {\n      expect($dis2.text().trim()).to.eq(val);\n    });\n    cy.get('#cart_summary > tbody > tr  td:nth-child(4)').each(function (em, no, list) {\n      var text = em.text(); //if(text.includes(\"In stock\"))\n      if (text.includes(\"-20%\")) {\n        cy.get('#cart_summary> tbody > tr  td:nth-child(3)').eq(no).then(function (pname) {\n          var name = pname.text();\n          expect(name).to.equal(\"In stock\");\n        });\n      }\n    });\n    cy.get('.cart_navigation > .button > span').click(); //cy.xpath('//a[contains(@href,\"step=1\") and contains(@title,\"Proceed to checkout\")]').click()\n    cy.get('#email').type('rocky3456@gmail.com');\n    cy.get('#passwd').type('rocky3434');\n    cy.get('#SubmitLogin > span').click();\n    cy.get('#ordermsg > .form-control').type('i want my packeg as soon as possible', {\n      delay: 100\n    });\n    cy.get('.cart_navigation > .button > span').click();\n    cy.get('#cgv').not('[disabled]').check().should('be.checked');\n    cy.get('.cart_navigation > .button > span').click();\n    cy.get('.bankwire').click();\n    cy.get('#cart_navigation > .button > span').click();\n    cy.get('.account > span').click();\n    cy.get(':nth-child(1) > .myaccount-link-list > :nth-child(1) > a > span').click();\n    cy.fixture('example').then(function (data) {\n      this.data = data;\n    });\n    cy.get('.first_item > .history_price').should(function ($data2) {\n      expect($data2.text().trim()).to.eq(this.data.totle_price);\n    });\n  });\n});\ncy.get('#contact-link > a').click();\ncy.get('[id=\"id_contact\"]').select('Customer service');\ncy.get('#message').type('it nice to visdvdvd  it the website', {\n  delay: 100\n});\nvar yourFixturePath = 'upload.png';\ncy.get('#fileUpload').attachFile(yourFixturePath); // cy.get('#id_order')\n//.type('asdfbnhgfds')\ncy.get('#submitMessage').dblclick();\ncy.get('[alt=\"My Store\"]').click();\ncy.get('.logout').click();",
+              "err": {},
+              "uuid": "41c0dc67-9f38-4749-9231-de49be00fb14",
+              "parentUUID": "cddf5b89-4bca-4aa0-b556-b2246171be60",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "41c0dc67-9f38-4749-9231-de49be00fb14"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 154324,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

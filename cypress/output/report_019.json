@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-02T21:27:23.950Z",
+    "end": "2020-07-02T21:27:54.301Z",
+    "duration": 30351,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "04b9ecd2-bc66-4678-ae97-f61f029f695d",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\9.js",
+      "file": "cypress\\integration\\examples\\9.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4e3464bb-46ca-4fe3-9fa6-1392189f0de8",
+          "title": "must try and try",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1st",
+              "fullTitle": "must try and try 1st",
+              "timedOut": null,
+              "duration": 17506,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://testautomationpractice.blogspot.com/');\ncy.get('#Wikipedia1_wikipedia-search-input').click().type('bugatti chiron');\ncy.get('.wikipedia-search-button').click();\ncy.get('#Wikipedia1_wikipedia-search-results > :nth-child(1) > a').click(); //cy.visit ('https://en.wikipedia.org/wiki/Bugatti_Chiron')\n//cy.title().should('eq','Bugatti Chiron - Wikipedia')",
+              "err": {},
+              "uuid": "df76a71d-e3b0-41ea-b6ac-b2118f74c8ec",
+              "parentUUID": "4e3464bb-46ca-4fe3-9fa6-1392189f0de8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2nd",
+              "fullTitle": "must try and try 2nd",
+              "timedOut": null,
+              "duration": 2942,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(7) > a').trigger('mouseover');\ncy.get(':nth-child(8) > a').trigger('mouseover');\ncy.get('#age').click().type('19');",
+              "err": {},
+              "uuid": "ca78b085-cce7-40da-bdce-ef46e264fe49",
+              "parentUUID": "4e3464bb-46ca-4fe3-9fa6-1392189f0de8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3rd",
+              "fullTitle": "must try and try 3rd",
+              "timedOut": null,
+              "duration": 1807,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath('//*[@id=\"HTML1\"]/div[1]/table').contains('td', 'Learn JS').should('be.visible'); //cy.get('table[name=BookTable]')\ncy.get('table[name=BookTable] > tbody > :nth-child(4) > :nth-child(2)').contains('Animesh').should('be.visible');\ncy.get('table[name=BookTable] > tbody > tr  td:nth-child(2)').each(function (em, no, list) {\n  var text = em.text();\n  if (text.includes(\"Animesh\")) {\n    cy.get('table[name=BookTable] > tbody > tr  td:nth-child(1)').eq(no).then(function (pname) {\n      var Bookname = pname.text();\n      expect(Bookname).to.equal(\"Learn JS\");\n    });\n  }\n});",
+              "err": {},
+              "uuid": "2f8deb68-acf6-4495-af8d-65e1b8a7b061",
+              "parentUUID": "4e3464bb-46ca-4fe3-9fa6-1392189f0de8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "df76a71d-e3b0-41ea-b6ac-b2118f74c8ec",
+            "ca78b085-cce7-40da-bdce-ef46e264fe49",
+            "2f8deb68-acf6-4495-af8d-65e1b8a7b061"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22255,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

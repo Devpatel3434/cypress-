@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-02T21:14:30.657Z",
+    "end": "2020-07-02T21:16:47.192Z",
+    "duration": 136535,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "110c5176-adba-4098-a82d-9f66fb582fe4",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\10.js",
+      "file": "cypress\\integration\\examples\\10.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "271298ae-a311-4127-b7cd-c6ce109b6f36",
+          "title": "cust cmd",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login",
+              "fullTitle": "cust cmd login",
+              "timedOut": null,
+              "duration": 47106,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://admin-demo.nopcommerce.com/login');\ncy.get('input[name=Email]').clear().type('admin@yourstore.com');\ncy.get('input[name=Password]').clear().type('admin');\ncy.get('[type=submit]').click();",
+              "err": {},
+              "uuid": "5184cdfe-dd96-458f-aac7-675eb865290e",
+              "parentUUID": "271298ae-a311-4127-b7cd-c6ce109b6f36",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login_2",
+              "fullTitle": "cust cmd login_2",
+              "timedOut": null,
+              "duration": 31308,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('admin@yourstore.com', 'admin');",
+              "err": {},
+              "uuid": "fc1e0031-3986-4000-850a-95236f5d4511",
+              "parentUUID": "271298ae-a311-4127-b7cd-c6ce109b6f36",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login_3",
+              "fullTitle": "cust cmd login_3",
+              "timedOut": null,
+              "duration": 53431,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('admin@yourstore.com', 'admin');",
+              "err": {},
+              "uuid": "bdd49bed-0979-44c1-87d9-b58c00e8514b",
+              "parentUUID": "271298ae-a311-4127-b7cd-c6ce109b6f36",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5184cdfe-dd96-458f-aac7-675eb865290e",
+            "fc1e0031-3986-4000-850a-95236f5d4511",
+            "bdd49bed-0979-44c1-87d9-b58c00e8514b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 131845,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

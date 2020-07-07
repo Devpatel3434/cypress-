@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-05T12:44:53.018Z",
+    "end": "2020-07-05T12:45:22.751Z",
+    "duration": 29733,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "868c14e1-4f60-4c4c-85b7-2107b84d35e3",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\depencendy_testing2.js",
+      "file": "cypress\\integration\\examples\\depencendy_testing2.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "52a84f36-9600-4bcf-8bcb-5792b62ad375",
+          "title": "1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1",
+              "fullTitle": "1 1",
+              "timedOut": null,
+              "duration": 21618,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.input()\ncy.visit('http://automationpractice.com/index.php?id_product=1&controller=product#/size-s/color-blue'); //const txt1= require('../examples/12_3')\ncy.get('#our_price_display').should(function ($data2) {\n  expect($data2.text()).to.eq(this.data.price);\n});",
+              "err": {},
+              "uuid": "e74098fd-ebc3-44d4-a221-c90f0fc5d7bb",
+              "parentUUID": "52a84f36-9600-4bcf-8bcb-5792b62ad375",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e74098fd-ebc3-44d4-a221-c90f0fc5d7bb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21618,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-06T06:22:35.708Z",
+    "end": "2020-07-06T06:23:03.062Z",
+    "duration": 27354,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "13e69bf8-019a-4072-bbe2-a27408bd9d85",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\dependency_testing.js",
+      "file": "cypress\\integration\\examples\\dependency_testing.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e25dd6aa-9306-411a-b571-97fcd718e97a",
+          "title": "My First Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": " headings",
+              "fullTitle": "My First Test  headings",
+              "timedOut": null,
+              "duration": 21106,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php');\ncy.get('#search_query_top').type('T-Shirts', {\n  delay: 100\n});\ncy.get('.button-search').click({\n  delay: 100\n});\ncy.get('.right-block > .content_price > .price').then(function ($data) {\n  var txt = $data.text(); // cy.get('[title=\"Faded Short Sleeve T-shirts\"]').then(($btn) => {\n  // const txt = $btn.text()\n  cy.get('#color_2').click(); //cy.get('h1')\n  cy.get('#our_price_display').should(function ($data2) {\n    expect($data2.text()).not.to.eq(txt); //cy.get('.cart_description > .product-name > a').should(($btn2) => {\n    // expect($btn2.text()).not.to.eq(txt)\n    //cy.get('#product_price_1_4_0 > .price').should(($btn2) => {\n    //expect($btn2.text()).not.to.eq(txt)\n  });\n});",
+              "err": {},
+              "uuid": "55798ef3-cc8f-45ab-b4af-d77bd1a3cdaf",
+              "parentUUID": "e25dd6aa-9306-411a-b571-97fcd718e97a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "55798ef3-cc8f-45ab-b4af-d77bd1a3cdaf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21106,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

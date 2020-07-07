@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-07-06T06:27:00.080Z",
+    "end": "2020-07-07T03:21:40.282Z",
+    "duration": 75280202,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "affd0ef4-1018-4c07-846d-c1bbd5a0395b",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\fixture.js",
+      "file": "cypress\\integration\\examples\\fixture.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b5ff62d9-20c6-4bf6-be21-5f16f36b8ef4",
+          "title": "My First Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": " headings",
+              "fullTitle": "My First Test  headings",
+              "timedOut": null,
+              "duration": 43408441,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php');\ncy.get('#search_query_top').type('T-Shirts', {\n  delay: 100\n});\ncy.get('.button-search').click({\n  delay: 100\n});\ncy.get('#color_2').click();\ncy.get('#thumb_4').trigger('mouseover');\ncy.get('#group_1').select('2');\ncy.get('[name=\"Submit\"]').click();\ncy.get('[title=\"Continue shopping\"]').click();\ncy.get('[title=\"View my shopping cart\"]').trigger('mouseover');\ncy.get('[alt=\"My Store\"]').click();\ncy.scrollTo('center');\ncy.get('[title=\"View my shopping cart\"]').click();\ncy.get('.cart_navigation > .button > span').click(); //cy.xpath('//a[contains(@href,\"step=1\") and contains(@title,\"Proceed to checkout\")]').click() ( another method to get)\n//cy.get('#email_create').type('absuc27e8y327@gmail.com')\ncy.get('#email_create').type(this.data.emails); //Use this for fixture\n//cy.get('#email_create').should('contain', this.data.emails)\ncy.get('#SubmitCreate').click();",
+              "err": {
+                "message": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.",
+                "estack": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.\n    at http://automationpractice.com/__cypress/runner/cypress_runner.js:157701:22\n    at tryCatcher (http://automationpractice.com/__cypress/runner/cypress_runner.js:10161:23)\n    at http://automationpractice.com/__cypress/runner/cypress_runner.js:5283:41\n    at tryCatcher (http://automationpractice.com/__cypress/runner/cypress_runner.js:10161:23)\n    at Promise._settlePromiseFromHandler (http://automationpractice.com/__cypress/runner/cypress_runner.js:8096:31)\n    at Promise._settlePromise (http://automationpractice.com/__cypress/runner/cypress_runner.js:8153:18)\n    at Promise._settlePromise0 (http://automationpractice.com/__cypress/runner/cypress_runner.js:8198:10)\n    at Promise._settlePromises (http://automationpractice.com/__cypress/runner/cypress_runner.js:8274:18)\n    at _drainQueueStep (http://automationpractice.com/__cypress/runner/cypress_runner.js:4868:12)\n    at _drainQueue (http://automationpractice.com/__cypress/runner/cypress_runner.js:4861:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:4877:5)\n    at Async.drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:4747:14)",
+                "diff": null
+              },
+              "uuid": "07062848-06e1-41ac-9c3d-a05180e0e4a9",
+              "parentUUID": "b5ff62d9-20c6-4bf6-be21-5f16f36b8ef4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "07062848-06e1-41ac-9c3d-a05180e0e4a9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 43408441,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

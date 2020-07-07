@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-05T12:39:33.710Z",
+    "end": "2020-07-05T12:40:59.534Z",
+    "duration": 85824,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b29ba467-eb57-479f-b0fb-ce17838b9b81",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\automation_practice.js",
+      "file": "cypress\\integration\\examples\\automation_practice.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ca8dd05c-4266-4055-98a5-14280a4c804b",
+          "title": "My First Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": " headings",
+              "fullTitle": "My First Test  headings",
+              "timedOut": null,
+              "duration": 75800,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php');\ncy.get('#search_query_top').type('T-Shirts', {\n  delay: 100\n});\ncy.get('.button-search').click({\n  delay: 100\n});\ncy.get('#color_2').click();\ncy.get('#thumb_4').trigger('mouseover');\ncy.get('#group_1').select('2');\ncy.get('[name=\"Submit\"]').click();\ncy.get('[title=\"Continue shopping\"]').click();\ncy.get('[title=\"View my shopping cart\"]').trigger('mouseover');\ncy.get('[alt=\"My Store\"]').click(); //cy.scrollTo('bottom')\ncy.scrollTo('center'); // cy.scrollTo('top')\ncy.get('[title=\"View my shopping cart\"]').click();\ncy.get('.cart_navigation > .button > span').click(); //cy.xpath('//a[contains(@href,\"step=1\") and contains(@title,\"Proceed to checkout\")]').click()\ncy.get('#email_create').type('hello32e4234@gmail.com');\n/*cy.reload()\ncy.title().should('eq','Login - My Store')\n  cy.go('back')\ncy.title().should('eq','Order - My Store')\n  cy.go('back')*/\ncy.get('#SubmitCreate').click(); //cy.title().should('eq','Login - My Store')",
+              "err": {},
+              "uuid": "dc1ef3e5-1962-4bc2-b4e7-9919b0a5e659",
+              "parentUUID": "ca8dd05c-4266-4055-98a5-14280a4c804b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dc1ef3e5-1962-4bc2-b4e7-9919b0a5e659"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 75800,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/output",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
