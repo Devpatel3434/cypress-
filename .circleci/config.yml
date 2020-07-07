@@ -1,6 +1,15 @@
-version: 2
 jobs:
-  test:
+  # give any name to job
+  4x-electron:
+    # use Cypress built Docker image with Node 10 and npm 6
     docker:
-      - image: circleci/<language>:<version TAG>
+      - image: cypress/base:10
+    # tells CircleCI to execute this job on 4 machines simultaneously
     parallelism: 4
+    steps:
+      - checkout
+      # note: omitting caching for brevity
+      # quickly install NPM dependencies
+      - npm ci
+      # load balance all tests across 4 CI machines
+      - $(npm bin)/cypress run --parallel
