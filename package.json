@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "scripts": "npx cypress run ",
+    "scripts": "npx cypress run ", 
     "merge": "mochawesome-merge  cypress/output/*.json >cypress/reports/final.json",
     "generate_mochawesome_report": "marge cypress/reports/final.json --reportDir ./ --inline",
     "final_report": "npm run merge && npm run generate_mochawesome_report",
-    "test": "npm run scripts || npm run final_report",
+    "test": "npm run scripts || npm run final_report", 
     "runtests": "npm run scripts"
   },
   "author": "DEVIL",
@@ -24,5 +24,8 @@
     "mochawesome": "^6.1.1",
     "mochawesome-merge": "^4.1.0",
     "mochawesome-report-generator": "^5.1.0"
+  },
+  "dependencies": {
+    "convert-excel-to-json": "^1.7.0"
   }
 }
