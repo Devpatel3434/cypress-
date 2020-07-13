@@ -11,7 +11,7 @@ describe('Actions', () => {
       //.prev().should('eq','HALFOFF')
     }) 
   })
-    xdescribe('querying'()=>{ // mute this whole contant and all it block
+    xdescribe('querying',()=>{ // mute this whole contant and all it block
 
     
     it.skip( '3rd', () => { // this will skip this it block
