@@ -10,16 +10,16 @@ cy.visit('https://admin-demo.nopcommerce.com/login')
 
 fillEmail(value)
 {
-const fd=cy.get('#Email')
-fd.clear()
-fd.type(value)
-return this
+const fd=cy.get('#Email') // this line work as locater
+fd.clear() // clear the filled
+fd.type(value) //  type methode  use to enter value
+return this //   this abouve methode of fillEmail belong to this Login page 
 }
 
 fillpassword(value)
 {
 
-const fd=cy.get('#Password')
+const fd=cy.get('#Password') 
 fd.clear()
 fd.type(value)
 return this 
@@ -34,4 +34,4 @@ submit()
 
 }
 
-export default LoginPage
+export default LoginPage // this will enable to access this login page in another file
