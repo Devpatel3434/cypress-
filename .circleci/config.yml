@@ -1,5 +1,7 @@
 
 
+
+
 version: 2
 
 jobs:
@@ -60,7 +62,7 @@ jobs:
       - run: ls -la cypress/integration
       - run:
           name: Running cypress tests 2
-          command: $(npm bin)/cypress run --spec cypress/integration/dependency_testing/depencendy_testing_using_fixture.js
+          command: $(npm bin)/cypress run --spec cypress/integration/examples/all_in_blogspot.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
@@ -78,7 +80,7 @@ jobs:
       - run: ls -la cypress/integration
       - run:
           name: Running cypress tests 3
-          command: $(npm bin)/cypress run --spec cypress/integration/youtube_practice/custom_commands.js
+          command: $(npm bin)/cypress run --spec cypress/integration/examples/all_in_automation.js 
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
