@@ -34,7 +34,7 @@ jobs:
       - image: 'cypress/base:10'
         environment:
           TERM: xterm
-    parallelism: 1
+   
     steps:
       - attach_workspace:
           at: ~/
@@ -53,7 +53,7 @@ jobs:
       - image: 'cypress/base:10'
         environment:
           TERM: xterm
-    parallelism: 2
+   
     steps:
       - attach_workspace:
           at: ~/
@@ -72,7 +72,7 @@ jobs:
       - image: 'cypress/base:10'
         environment:
           TERM: xterm
-    parallelism: 3
+    
     steps:
       - attach_workspace:
           at: ~/
@@ -91,7 +91,7 @@ jobs:
       - image: 'cypress/base:10'
         environment:
           TERM: xterm
-    parallelism: 4
+    
     steps:
       - attach_workspace:
           at: ~/
