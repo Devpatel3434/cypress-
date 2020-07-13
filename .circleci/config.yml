@@ -94,8 +94,7 @@ jobs:
       - run: ls -la cypress/integration
       - run:
           name: Running cypress tests 4
-          command: $(npm bin)/cypress run --spec cypress\integration\1st_folder/*.js,cypress\integration\2nd_folder/*.js,cypress\integration\3rd_folder/*.js"
-           
+          command: $(npm bin)/cypress run --spec cypress\integration\1st_folder/*.js,cypress\integration\2nd_folder/*.js,cypress\integration\3rd_folder/*.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
