@@ -60,7 +60,7 @@ jobs:
       - run: ls -la cypress/integration
       - run:
           name: Running cypress tests 2
-          command: $(npm bin)/cypress run --parallel
+          command: $(npm bin)/cypress run --spec cypress/integration/examples/all_in_blogspot.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
@@ -79,7 +79,7 @@ jobs:
       - run: ls -la cypress/integration
       - run:
           name: Running cypress tests 3
-          command: $(npm bin)/cypress run --parallel
+          command: $(npm bin)/cypress run --spec cypress/integration/examples/all_in_automation.js 
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
@@ -98,7 +98,7 @@ jobs:
       - run: ls -la cypress/integration
       - run:
           name: Running cypress tests 4
-          command: $(npm bin)/cypress run --parallel 
+          command: $(npm bin)/cypress run --record --key=cc33bdba-8d6f-45a0-a6f3-e14df1b89919 --parallel
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
