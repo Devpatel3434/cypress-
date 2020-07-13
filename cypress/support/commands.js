@@ -28,12 +28,12 @@ import 'cypress-file-upload';
 
 import 'cypress-iframe';
 
-Cypress.Commands.add("login",(email,password)=>{
+Cypress.Commands.add("login",(email,password)=>{ // created custam command with name login to enter email and password
 
-    cy.visit('https://admin-demo.nopcommerce.com/login')
-    cy.get('input[name=Email]').clear().type(email)
+    cy.visit('https://admin-demo.nopcommerce.com/login') // redirect to this url
+    cy.get('input[name=Email]').clear().type(email)// locate and type using variable
     cy.get('input[name=Password]').clear().type(password)
-    cy.get('[type=submit]').click()
+    cy.get('[type=submit]').click()// locate and perform click event 
 
 
 })
@@ -48,7 +48,8 @@ Cypress.Commands.add("register",(email)=>{
 
 })
 
-Cypress.Commands.add("input",()=>{
+Cypress.Commands.add("input",()=>{  // created custam command with name input with dependency testing
+
 
 cy.visit('http://automationpractice.com/index.php?id_category=5&controller=category')
 cy.get('.right-block > .content_price > .price').then(($data) => {
