@@ -1,3 +1,4 @@
+#Circle ci
 version: 2
 
 jobs:
@@ -27,14 +28,66 @@ jobs:
           paths:
             - .cache
             - tmp
-  
+  test1:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 1
+          command: $(npm bin)/cypress run --spec cypress/integration/examples/all_in_blogspot.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test2:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 2
+          command: $(npm bin)/cypress run --spec cypress/integration/examples/all_in_blogspot.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test3:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 3
+          command: $(npm bin)/cypress run --record --key=cc33bdba-8d6f-45a0-a6f3-e14df1b89919  --parallel 
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
   test4:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
         environment:
           TERM: xterm
-    parallelism: 4
     steps:
       - attach_workspace:
           at: ~/
@@ -42,7 +95,7 @@ jobs:
       - run: ls -la cypress/integration
       - run:
           name: Running cypress tests 4
-          command: $(npm bin)/cypress run --record --key=cc33bdba-8d6f-45a0-a6f3-e14df1b89919 --group 4x  --parallel  
+          command: $(npm bin)/cypress run --spec cypress/integration/examples/all_in_automation.js 
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
@@ -53,6 +106,15 @@ workflows:
   build_and_test:
     jobs:
       - build
+      - test1:
+          requires:
+            - build
+      - test2:
+          requires:
+            - build
+      - test3:
+          requires:
+            - build
       - test4:
           requires:
             - build
